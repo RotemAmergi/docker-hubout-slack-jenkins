@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  hubot:
+    image: hubot:latest
+    ports:
+      - "8080:8080"
+    environment:
+      HUBOT_SLACK_TOKEN: "HUBOT_SLACK_TOKEN"
+      EXTERNAL_SCRIPTS: "hubot-help,hubot-pugme"
+      HUBOT_JENKINS_URL: "HUBOT_JENKINS_URL"
+      HUBOT_JENKINS_AUTH: "HUBOT_JENKINS_AUTH(USER_NAME:PASSWORD)"
+    restart: always
